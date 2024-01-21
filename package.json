@@ -2,6 +2,9 @@
   "name": "auction-service",
   "description": "This template demonstrates how to make a simple HTTP API with Node.js and Typescript running on AWS Lambda and API Gateway using the Serverless Framework v3",
   "version": "1.0.0",
+  "scripts": {
+    "debug" : "export SLS_DEBUG=* && node --inspect node_modules/serverless/bin/serverless offline"
+  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.131",
     "serverless": "^3.38.0",
