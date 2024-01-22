@@ -3,8 +3,11 @@ frameworkVersion: '3'
 
 provider:
   name: aws
+  deploymentMethod: direct
   runtime: nodejs20.x
   memorySize: 128
+  stage: ${opt:stage, 'dev'}
+  profile: yuriy-admin
   
 
 functions:
