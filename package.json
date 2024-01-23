@@ -5,7 +5,8 @@
   "scripts": {
     "debug" : "export SLS_DEBUG=* && node --inspect node_modules/serverless/bin/serverless offline",
     "sls-deploy-win": "set AWS_SDK_LOAD_CONFIG=1 && sls deploy --verbose --aws-profile yuriy-admin",
-    "sls-deploy-unix": "export AWS_SDK_LOAD_CONFIG=1 && sls deploy --verbose --aws-profile yuriy-admin"
+    "sls-deploy-unix": "export AWS_SDK_LOAD_CONFIG=1 && sls deploy --verbose --aws-profile yuriy-admin",
+    "sls-remove": "export AWS_SDK_LOAD_CONFIG=1 && sls remove --verbose --aws-profile yuriy-admin"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.131",
