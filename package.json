@@ -3,16 +3,23 @@
   "description": "Yuriy is going through learning Serverless Framework",
   "version": "1.0.0",
   "scripts": {
-    "debug" : "export SLS_DEBUG=* && node --inspect node_modules/serverless/bin/serverless offline",
+    "debug": "export SLS_DEBUG=* && node --inspect node_modules/serverless/bin/serverless offline",
     "sls-deploy-win": "set AWS_SDK_LOAD_CONFIG=1 && sls deploy --verbose --aws-profile yuriy-admin",
     "sls-deploy-unix": "export AWS_SDK_LOAD_CONFIG=1 && sls deploy --verbose --aws-profile yuriy-admin",
-    "sls-remove": "export AWS_SDK_LOAD_CONFIG=1 && sls remove --verbose --aws-profile yuriy-admin"
+    "sls-remove-win": "set AWS_SDK_LOAD_CONFIG=1 && sls remove --verbose --aws-profile yuriy-admin",
+    "sls-remove-unix": "set AWS_SDK_LOAD_CONFIG=1 && sls remove --verbose --aws-profile yuriy-admin",
+    "createAuction-offline-win": "set AWS_PROFILE=yuriy-admin && sls offline"
   },
   "devDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.496.0",
     "@types/aws-lambda": "^8.10.131",
+    "@types/uuid": "^9.0.7",
     "serverless": "^3.38.0",
     "serverless-offline": "^13.3.3",
     "serverless-plugin-typescript": "^2.1.5",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "uuid": "^9.0.1"
   }
 }
